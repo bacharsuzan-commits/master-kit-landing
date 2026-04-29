@@ -3,537 +3,725 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>ערכת המאסטר MASTER KIT — סוזן בכר</title>
-<meta name="description" content="להפסיק לרדוף אחרי לקוחות קטנים ולהפוך לספק מבוקש בארגונים וחברות. ₪49 בלבד."/>
+<title>ערכת המאסטר — סוזן בכר | הכלי שיכניס אותך לארגונים</title>
+<meta name="description" content="להפסיק לרדוף אחרי לקוחות קטנים. 7 כלים מעשיים שיהפכו אותך לספק מבוקש בארגונים. ₪49 בלבד."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Heebo',sans-serif;direction:rtl;text-align:right;background:#fff;color:#1E2A38;overflow-x:hidden}
+body{font-family:'Heebo',sans-serif;direction:rtl;text-align:right;background:#fff;color:#1E2A38;overflow-x:hidden;line-height:1.6}
 
 :root{
-  --navy:#1E2A38;--navy2:#253648;--navy3:#0f1922;
-  --gold:#DABA88;--gold2:#c9a56e;--gold3:#f0d4a8;
+  --navy:#1E2A38;--navy2:#253648;--navy3:#0d1620;
+  --gold:#DABA88;--gold2:#c9a56e;--gold3:#eddbb5;
   --cream:#F0E9DF;--cream2:#e4d9cc;
-  --brown:#AC8469;
-  --red:#c0392b;
-  --white:#ffffff;
+  --brown:#AC8469;--red:#c0392b;--white:#fff;
   --r:14px;
-  --shadow-gold:0 8px 32px rgba(218,186,136,.35);
-  --shadow-navy:0 12px 48px rgba(30,42,56,.25);
+  --sg:0 8px 40px rgba(218,186,136,.35);
+  --sn:0 16px 60px rgba(30,42,56,.25);
 }
 
-/* ── ANIMATIONS ── */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
-.reveal.on{opacity:1;transform:none}
-.reveal-l{opacity:0;transform:translateX(50px);transition:opacity .7s ease,transform .7s ease}
-.reveal-l.on{opacity:1;transform:none}
-.reveal-r{opacity:0;transform:translateX(-50px);transition:opacity .7s ease,transform .7s ease}
-.reveal-r.on{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
-.d4{transition-delay:.34s}.d5{transition-delay:.42s}.d6{transition-delay:.5s}.d7{transition-delay:.58s}
+/* ── REVEAL ── */
+.r0{opacity:0;transform:translateY(44px);transition:opacity .75s ease,transform .75s ease}
+.rl{opacity:0;transform:translateX(56px);transition:opacity .75s ease,transform .75s ease}
+.rr{opacity:0;transform:translateX(-56px);transition:opacity .75s ease,transform .75s ease}
+.rs{opacity:0;transform:scale(.9);transition:opacity .7s ease,transform .7s ease}
+.on{opacity:1!important;transform:none!important}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}.d7{transition-delay:.56s}
 
-/* ── STICKY MOBILE BAR ── */
-.sticky{position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--navy);border-top:2px solid var(--gold);padding:12px 18px;display:none;align-items:center;justify-content:space-between;gap:10px}
-.sticky-txt{color:var(--gold);font-weight:900;font-size:1rem;white-space:nowrap}
-.sticky-txt s{color:rgba(255,255,255,.45);font-size:.75rem;font-weight:400;margin-left:6px}
-.sticky-btn{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:11px 20px;font:900 .93rem/1 'Heebo',sans-serif;cursor:pointer;white-space:nowrap;flex-shrink:0}
-@media(max-width:768px){.sticky{display:flex}body{padding-bottom:72px}}
+/* ── STICKY MOBILE ── */
+.sticky-mob{position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--navy);border-top:3px solid var(--gold);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -4px 24px rgba(0,0,0,.3)}
+.sm-txt{color:#fff;font-size:.85rem;font-weight:700;line-height:1.3}
+.sm-txt b{color:var(--gold);font-size:1.1rem}
+.sm-txt s{color:rgba(255,255,255,.4);font-weight:400;font-size:.8rem}
+.sm-btn{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:12px 18px;font:900 .9rem/1 'Heebo',sans-serif;cursor:pointer;flex-shrink:0;white-space:nowrap;box-shadow:var(--sg)}
+@media(max-width:768px){.sticky-mob{display:flex}body{padding-bottom:74px}}
 
 /* ── NAV ── */
-nav{background:var(--navy);position:sticky;top:0;z-index:800;border-bottom:1px solid rgba(218,186,136,.15)}
-.nav-inner{max-width:1020px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+nav{background:var(--navy3);border-bottom:1px solid rgba(218,186,136,.15);position:sticky;top:0;z-index:800}
+.nav-i{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
-.logo-txt{color:var(--gold);font-weight:900;font-size:1rem;line-height:1.2}
-.logo-txt span{display:block;color:rgba(255,255,255,.6);font-size:.7rem;font-weight:400}
-.nav-cta{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:10px 22px;font:900 .9rem/1 'Heebo',sans-serif;cursor:pointer;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+.logo-av{width:38px;height:38px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.logo-name{color:var(--gold);font:900 1rem/1.1 'Heebo',sans-serif}
+.logo-name small{display:block;color:rgba(255,255,255,.5);font:400 .68rem/1 'Heebo',sans-serif;margin-top:2px}
+.nav-btn{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);border:none;border-radius:8px;padding:10px 22px;font:900 .88rem/1 'Heebo',sans-serif;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.nav-btn:hover{transform:translateY(-2px);box-shadow:var(--sg)}
 
-/* ── URGENCY ── */
-.urgency{background:linear-gradient(90deg,#a93226,var(--red));color:#fff;text-align:center;padding:11px 20px;font:700 .88rem/1.4 'Heebo',sans-serif}
-.urgency b{color:#ffd700}
+/* ── URGENCY BAR ── */
+.urg{background:linear-gradient(90deg,#9b2226,var(--red));color:#fff;text-align:center;padding:10px 20px;font:700 .87rem/1.4 'Heebo',sans-serif}
+.urg b{color:#ffd700;font-size:1rem}
+.urg .count-box{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.25);border-radius:6px;padding:3px 10px;margin-right:8px;font-size:.8rem}
+#countdown{font:900 1rem/1 'Heebo',sans-serif;color:#ffd700;letter-spacing:.03em}
 
 /* ── HERO ── */
-.hero{background:linear-gradient(145deg,var(--navy3) 0%,var(--navy) 50%,var(--navy2) 100%);padding:72px 20px 64px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(218,186,136,.07) 0%,transparent 70%);top:-100px;left:-100px;pointer-events:none}
-.hero::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(218,186,136,.05) 0%,transparent 70%);bottom:-80px;right:-80px;pointer-events:none}
-.hero-inner{max-width:1020px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center;position:relative;z-index:1}
+.hero{background:linear-gradient(155deg,var(--navy3) 0%,var(--navy) 55%,#1a2e40 100%);padding:76px 20px 68px;position:relative;overflow:hidden}
+.hero-blob1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(218,186,136,.07) 0%,transparent 65%);top:-150px;left:-150px;pointer-events:none}
+.hero-blob2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(218,186,136,.05) 0%,transparent 65%);bottom:-120px;right:-120px;pointer-events:none}
+.hero-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;position:relative;z-index:1}
 
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(218,186,136,.12);border:1px solid rgba(218,186,136,.35);border-radius:100px;padding:7px 18px;color:var(--gold);font:700 .78rem/1 'Heebo',sans-serif;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
-.hero h1{font-size:clamp(1.9rem,4vw,2.9rem);color:#fff;line-height:1.18;margin-bottom:14px;font-weight:900}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(218,186,136,.1);border:1px solid rgba(218,186,136,.3);border-radius:100px;padding:7px 18px;color:var(--gold);font:700 .75rem/1 'Heebo',sans-serif;letter-spacing:.07em;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,4.2vw,3.1rem);color:#fff;font-weight:900;line-height:1.14;margin-bottom:16px}
 .hero h1 em{font-style:normal;color:var(--gold)}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:24px}
-.hero-bullets{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
-.bullet{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.7);font-size:.87rem}
-.bullet::before{content:'✓';color:var(--gold);font-weight:900}
+.hero h1 u{text-decoration:none;border-bottom:3px solid var(--gold);padding-bottom:2px}
+.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:8px}
+.hero-sub strong{color:var(--gold3)}
 
-/* ── KIT IMAGE (left col) ── */
-.kit-visual{position:relative;display:flex;align-items:center;justify-content:center}
-.kit-visual img{width:100%;max-width:440px;border-radius:20px;filter:drop-shadow(0 20px 50px rgba(218,186,136,.35));transition:transform .4s ease}
-.kit-visual img:hover{transform:scale(1.03) rotate(1deg)}
-.kit-glow{position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 50% 50%,rgba(218,186,136,.15) 0%,transparent 70%);pointer-events:none}
+.hero-promise{background:rgba(218,186,136,.08);border-right:4px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0 28px;font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.7}
+.hero-promise strong{color:var(--gold)}
 
-/* ── FORM CARD ── */
-.form-card{background:#fff;border-radius:20px;padding:34px 30px;box-shadow:0 24px 64px rgba(0,0,0,.4),0 0 0 1px rgba(218,186,136,.2)}
-.fc-title{font-size:1.1rem;font-weight:900;color:var(--navy);text-align:center;margin-bottom:4px}
-.fc-sub{font-size:.83rem;color:var(--brown);text-align:center;margin-bottom:20px}
-.price-row{display:flex;align-items:baseline;justify-content:center;gap:10px;margin-bottom:6px}
-.price-new{font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1}
-.price-old{font-size:1rem;color:#bbb;text-decoration:line-through}
-.price-note{text-align:center;font-size:.78rem;color:var(--brown);margin-bottom:20px}
-.fi{margin-bottom:12px}
-.fi input{width:100%;border:2px solid #e8e8e8;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;transition:border-color .25s}
-.fi input:focus{border-color:var(--gold)}
-.fi input::placeholder{color:#bbb}
-.btn-gold{width:100%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);color:var(--navy);border:none;border-radius:10px;padding:16px;font:900 1.08rem/1 'Heebo',sans-serif;cursor:pointer;box-shadow:var(--shadow-gold);transition:transform .25s,box-shadow .25s;margin-top:4px}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(218,186,136,.55)}
-.fc-secure{text-align:center;font-size:.73rem;color:#aaa;margin-top:11px}
+.hero-ticks{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.ht{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.78);font-size:.86rem}
+.ht::before{content:'✓';color:var(--gold);font-weight:900;font-size:.9rem}
 
-@media(max-width:768px){
+/* FORM CARD */
+.fc{background:#fff;border-radius:22px;padding:36px 30px;box-shadow:0 28px 70px rgba(0,0,0,.4),0 0 0 2px rgba(218,186,136,.2);position:relative;overflow:hidden}
+.fc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.fc-hd{font:900 1.1rem/1 'Heebo',sans-serif;color:var(--navy);text-align:center;margin-bottom:4px}
+.fc-sd{font-size:.82rem;color:var(--brown);text-align:center;margin-bottom:18px}
+.fc-price{text-align:center;margin-bottom:6px}
+.fc-price .p-new{font-size:3rem;font-weight:900;color:var(--navy);line-height:1}
+.fc-price .p-old{font-size:1rem;color:#bbb;text-decoration:line-through;margin-left:8px;vertical-align:middle}
+.fc-price .p-save{display:inline-block;background:var(--red);color:#fff;border-radius:6px;padding:3px 10px;font:700 .72rem/1 'Heebo',sans-serif;margin-right:8px;vertical-align:middle}
+.fc-installment{text-align:center;font-size:.77rem;color:var(--brown);margin-bottom:20px}
+.fi input{width:100%;border:2px solid #eaeaea;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;transition:border-color .25s,box-shadow .25s;margin-bottom:11px}
+.fi input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(218,186,136,.15)}
+.fi input::placeholder{color:#c0c0c0}
+.btn-cta{width:100%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);color:var(--navy);border:none;border-radius:10px;padding:17px;font:900 1.1rem/1 'Heebo',sans-serif;cursor:pointer;box-shadow:var(--sg);transition:transform .25s,box-shadow .25s;margin-top:2px;letter-spacing:.02em}
+.btn-cta:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(218,186,136,.55)}
+.btn-cta:active{transform:translateY(0)}
+.fc-secure{text-align:center;font-size:.72rem;color:#b0b0b0;margin-top:12px}
+
+.hero-kit-img{width:100%;border-radius:18px;filter:drop-shadow(0 24px 60px rgba(218,186,136,.4));transition:transform .5s ease}
+.hero-kit-img:hover{transform:scale(1.04) rotate(1.5deg)}
+.kit-wrap{position:relative}
+.kit-badge{position:absolute;top:-18px;right:-18px;background:var(--red);color:#fff;border-radius:50%;width:74px;height:74px;display:flex;flex-direction:column;align-items:center;justify-content:center;font:900 1rem/1 'Heebo',sans-serif;box-shadow:0 6px 20px rgba(192,57,43,.4);z-index:2}
+.kit-badge small{font-size:.6rem;font-weight:700;opacity:.85}
+
+@media(max-width:780px){
   .hero-inner{grid-template-columns:1fr;gap:36px}
-  .kit-visual{order:-1}
-  .hero{padding:52px 20px 44px}
+  .kit-wrap{order:-1;max-width:380px;margin:0 auto}
+  .hero{padding:54px 20px 46px}
+  .fc{padding:28px 22px}
 }
 
-/* ── COUNTER ── */
-.counter{background:var(--cream);padding:40px 20px}
-.counter-inner{max-width:760px;margin:0 auto;display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
-.cnt{text-align:center}
-.cnt-num{font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1}
-.cnt-num span{color:var(--gold)}
-.cnt-lbl{font-size:.83rem;color:#777;margin-top:4px}
-
 /* ── SECTION HELPERS ── */
-.section{padding:80px 20px}
-.section.cream{background:var(--cream)}
-.section.navy{background:var(--navy)}
-.wrap{max-width:1020px;margin:0 auto}
-.sec-head{text-align:center;margin-bottom:52px}
-.tag{display:inline-block;background:rgba(218,186,136,.15);border:1px solid rgba(218,186,136,.4);border-radius:100px;padding:6px 18px;color:var(--gold);font:700 .75rem/1 'Heebo',sans-serif;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px}
-.sec-title{font-size:clamp(1.65rem,3.5vw,2.2rem);font-weight:900;color:var(--navy);line-height:1.2;margin-bottom:12px}
-.sec-title.white{color:#fff}
-.sec-sub{font-size:1rem;color:#666;line-height:1.8;max-width:600px;margin:0 auto}
-.sec-sub.white{color:rgba(255,255,255,.65)}
+.sec{padding:84px 20px}
+.sec.cream{background:var(--cream)}
+.sec.navy{background:var(--navy)}
+.sec.dark{background:var(--navy3)}
+.wrap{max-width:1040px;margin:0 auto}
+.sh{text-align:center;margin-bottom:56px}
+.tag{display:inline-block;background:rgba(218,186,136,.15);border:1px solid rgba(218,186,136,.4);border-radius:100px;padding:6px 18px;color:var(--gold);font:700 .72rem/1 'Heebo',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.tag.red{background:rgba(192,57,43,.12);border-color:rgba(192,57,43,.3);color:var(--red)}
+.h2{font-size:clamp(1.7rem,3.5vw,2.3rem);font-weight:900;line-height:1.2;margin-bottom:12px}
+.h2.white{color:#fff}
+.sub{font-size:1rem;color:#666;line-height:1.8;max-width:620px;margin:0 auto}
+.sub.white{color:rgba(255,255,255,.65)}
 
-/* ── PAIN POINTS ── */
+/* ── BEFORE/AFTER ── */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px;margin:0 auto}
+.ba-col{border-radius:var(--r);padding:30px 26px}
+.ba-before{background:linear-gradient(135deg,#fdf0e0,#f5dfc0);border:2px solid #e8c99a}
+.ba-after{background:linear-gradient(135deg,var(--navy),var(--navy2));border:2px solid var(--gold)}
+.ba-label{font:900 .75rem/1 'Heebo',sans-serif;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.ba-before .ba-label{color:#8B4513}
+.ba-after .ba-label{color:var(--gold)}
+.ba-list{list-style:none}
+.ba-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.07);font-size:.92rem;line-height:1.5}
+.ba-after .ba-list li{border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.85)}
+.ba-before .ba-list li{color:#5a3e2b}
+.ba-list li span{flex-shrink:0;font-size:1rem;margin-top:1px}
+@media(max-width:580px){.ba-grid{grid-template-columns:1fr}}
+
+/* ── PAIN SECTION ── */
 .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
-.pain-card{background:#fff;border:2px solid var(--cream2);border-radius:var(--r);padding:26px 22px;display:flex;gap:16px;align-items:flex-start;transition:border-color .3s,box-shadow .3s}
-.pain-card:hover{border-color:var(--brown);box-shadow:0 4px 24px rgba(172,132,105,.13)}
-.pain-card.dark{background:linear-gradient(135deg,var(--navy),var(--navy2));border-color:var(--navy)}
-.pain-icon{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#fdf0e0,#f5dfc0);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
-.pain-card.dark .pain-icon{background:rgba(218,186,136,.12)}
-.pain-card h3{font-size:.98rem;font-weight:800;color:var(--navy);margin-bottom:5px}
-.pain-card.dark h3{color:var(--gold)}
+.pain-card{background:#fff;border:2px solid var(--cream2);border-radius:var(--r);padding:24px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .3s,box-shadow .3s,transform .3s}
+.pain-card:hover{border-color:var(--brown);box-shadow:0 8px 28px rgba(172,132,105,.15);transform:translateY(-3px)}
+.pi{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,#fdebd0,#f5dfc0);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.pain-card h3{font:800 .97rem/1.2 'Heebo',sans-serif;color:var(--navy);margin-bottom:6px}
 .pain-card p{font-size:.86rem;color:#666;line-height:1.7}
-.pain-card.dark p{color:rgba(255,255,255,.72)}
 
-/* ── KIT ITEMS ── */
-.kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.kit-item{background:rgba(255,255,255,.04);border:1px solid rgba(218,186,136,.2);border-radius:var(--r);overflow:hidden;transition:background .3s,border-color .3s,transform .3s}
-.kit-item:hover{background:rgba(218,186,136,.07);border-color:var(--gold);transform:translateY(-4px)}
-.kit-img{height:180px;overflow:hidden;background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(218,186,136,.15)}
-.kit-img img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .4s}
-.kit-item:hover .kit-img img{transform:scale(1.06)}
-.kit-body{padding:20px}
-.kit-num-badge{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(218,186,136,.12);border:2px solid var(--gold);color:var(--gold);font:900 .9rem/1 'Heebo',sans-serif;margin-bottom:10px}
-.kit-body h3{font-size:1rem;font-weight:800;color:var(--gold);margin-bottom:7px}
-.kit-body p{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.7}
+/* ── BIG QUOTE ── */
+.big-quote{max-width:780px;margin:0 auto;text-align:center;padding:56px 40px}
+.bq-mark{font-size:6rem;color:var(--gold);opacity:.3;line-height:.6;font-family:serif;display:block;margin-bottom:12px}
+.bq-text{font-size:clamp(1.3rem,2.8vw,1.9rem);font-weight:800;color:#fff;line-height:1.45;margin-bottom:24px}
+.bq-text em{font-style:normal;color:var(--gold)}
+.bq-author{font-size:.9rem;color:rgba(255,255,255,.55)}
 
-/* ── BENEFITS ── */
-.ben-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.ben-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border-right:4px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:18px 18px;box-shadow:0 2px 12px rgba(30,42,56,.07)}
-.ben-check{width:26px;height:26px;background:var(--gold);border-radius:50%;color:var(--navy);font:900 .8rem/1 'Heebo',sans-serif;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.ben-item p{font:.6rem 600 .95rem/1.5 'Heebo',sans-serif;color:var(--navy)}
+/* ── KIT GALLERY ── */
+.kit-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:22px}
+.kg-item{background:rgba(255,255,255,.04);border:1px solid rgba(218,186,136,.18);border-radius:var(--r);overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
+.kg-item:hover{transform:translateY(-6px);border-color:var(--gold);background:rgba(218,186,136,.07)}
+.kg-img{height:190px;background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(218,186,136,.12);overflow:hidden}
+.kg-img img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .4s}
+.kg-item:hover .kg-img img{transform:scale(1.08)}
+.kg-body{padding:20px 18px}
+.kg-num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(218,186,136,.1);border:2px solid var(--gold);color:var(--gold);font:900 .87rem/1 'Heebo',sans-serif;margin-bottom:10px}
+.kg-body h3{font:800 1rem/1.2 'Heebo',sans-serif;color:var(--gold);margin-bottom:7px}
+.kg-body p{font-size:.85rem;color:rgba(255,255,255,.62);line-height:1.7}
+.kg-value{display:inline-block;margin-top:10px;background:rgba(218,186,136,.1);border:1px solid rgba(218,186,136,.25);border-radius:6px;padding:3px 10px;font:700 .72rem/1 'Heebo',sans-serif;color:var(--gold3)}
+
+/* ── VALUE STACK ── */
+.vs-box{max-width:640px;margin:0 auto;background:rgba(255,255,255,.04);border:2px solid rgba(218,186,136,.2);border-radius:20px;overflow:hidden}
+.vs-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;border-bottom:1px solid rgba(218,186,136,.1)}
+.vs-row:last-child{border-bottom:none;background:rgba(218,186,136,.06)}
+.vs-name{font-size:.93rem;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:10px}
+.vs-name::before{content:'💎';font-size:1rem}
+.vs-price{font-weight:900;color:var(--gold);white-space:nowrap;font-size:.95rem}
+.vs-total-row{background:linear-gradient(135deg,rgba(218,186,136,.15),rgba(218,186,136,.08));padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+.vs-total-lbl{font:900 1rem/1 'Heebo',sans-serif;color:#fff}
+.vs-total-price{font:900 1.6rem/1 'Heebo',sans-serif;color:var(--gold)}
 
 /* ── TESTIMONIALS ── */
 .tes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.tes-card{background:#fff;border-radius:var(--r);padding:30px 26px;box-shadow:var(--shadow-navy);position:relative}
-.tes-card::before{content:'\201C';position:absolute;top:14px;right:20px;font-size:5rem;color:var(--gold);opacity:.18;line-height:1;font-family:serif}
-.tes-stars{color:#f5a623;letter-spacing:2px;margin-bottom:12px}
-.tes-text{font-size:.95rem;line-height:1.85;color:#444;font-style:italic;margin-bottom:18px}
-.tes-author{display:flex;align-items:center;gap:12px}
-.tes-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold);font:900 1rem/1 'Heebo',sans-serif;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.tes-name{font:800 .93rem/1 'Heebo',sans-serif;color:var(--navy)}
-.tes-role{font-size:.78rem;color:var(--brown);margin-top:3px}
+.tc{background:#fff;border-radius:var(--r);padding:30px 26px;box-shadow:var(--sn);position:relative;border-top:3px solid var(--gold);transition:transform .3s}
+.tc:hover{transform:translateY(-4px)}
+.tc::before{content:'\201C';position:absolute;top:12px;right:18px;font-size:5.5rem;color:var(--gold);opacity:.15;line-height:1;font-family:serif}
+.tc-stars{color:#f59e0b;letter-spacing:2px;margin-bottom:12px;font-size:1rem}
+.tc-result{background:linear-gradient(135deg,var(--cream),#f5dfc0);border-right:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:14px;font:700 .88rem/1.4 'Heebo',sans-serif;color:var(--navy)}
+.tc-text{font-size:.94rem;line-height:1.85;color:#444;font-style:italic;margin-bottom:18px}
+.tc-author{display:flex;align-items:center;gap:12px}
+.tc-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy2));color:var(--gold);font:900 1.1rem/1 'Heebo',sans-serif;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid var(--gold)}
+.tc-name{font:800 .93rem/1 'Heebo',sans-serif;color:var(--navy)}
+.tc-role{font-size:.78rem;color:var(--brown);margin-top:3px}
+
+/* ── URGENCY SECTION ── */
+.why-now{max-width:860px;margin:0 auto}
+.wyn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.wyn-item{background:rgba(255,255,255,.04);border:1px solid rgba(218,186,136,.2);border-radius:var(--r);padding:22px 18px;text-align:center;transition:background .3s}
+.wyn-item:hover{background:rgba(218,186,136,.08)}
+.wyn-icon{font-size:2rem;margin-bottom:12px;display:block}
+.wyn-item h3{font:800 .97rem/1.3 'Heebo',sans-serif;color:var(--gold);margin-bottom:6px}
+.wyn-item p{font-size:.84rem;color:rgba(255,255,255,.62);line-height:1.6}
+.wyn-cta-box{background:linear-gradient(135deg,rgba(192,57,43,.15),rgba(192,57,43,.08));border:1px solid rgba(192,57,43,.3);border-radius:var(--r);padding:28px;text-align:center}
+.wyn-cta-box p{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.7;margin-bottom:20px}
+.wyn-cta-box strong{color:var(--gold)}
 
 /* ── ABOUT ── */
-.about-inner{display:grid;grid-template-columns:220px 1fr;gap:52px;align-items:center;max-width:860px;margin:0 auto}
+.about-grid{display:grid;grid-template-columns:230px 1fr;gap:54px;align-items:center;max-width:880px;margin:0 auto}
 .about-img-wrap{position:relative}
-.about-img{width:200px;height:260px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow-navy);border:4px solid var(--gold);display:block}
-.about-glow{position:absolute;inset:-8px;border-radius:24px;background:radial-gradient(circle,rgba(218,186,136,.25) 0%,transparent 70%);z-index:-1}
-.about-title{color:var(--brown);font:700 .93rem/1 'Heebo',sans-serif;margin-bottom:16px}
-.about-h{font-size:1.8rem;font-weight:900;color:var(--navy);margin-bottom:4px}
-.about-p{font-size:.95rem;color:#555;line-height:1.85;margin-bottom:12px}
+.about-img{width:210px;height:270px;object-fit:cover;border-radius:20px;box-shadow:var(--sn);border:4px solid var(--gold);display:block}
+.about-ring{position:absolute;inset:-12px;border-radius:24px;border:2px dashed rgba(218,186,136,.3);pointer-events:none}
+.about-badge{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);border-radius:100px;padding:7px 18px;font:900 .75rem/1 'Heebo',sans-serif;white-space:nowrap;box-shadow:var(--sg)}
+.about-h{font:900 1.9rem/1 'Heebo',sans-serif;color:var(--navy);margin-bottom:4px}
+.about-role{font:700 .93rem/1 'Heebo',sans-serif;color:var(--brown);margin-bottom:16px}
+.about-p{font-size:.95rem;color:#555;line-height:1.85;margin-bottom:11px}
 .creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.cred{background:var(--cream);border:1px solid var(--cream2);border-radius:100px;padding:5px 15px;font:700 .8rem/1 'Heebo',sans-serif;color:var(--navy)}
-@media(max-width:640px){.about-inner{grid-template-columns:1fr;text-align:center}.about-img{width:160px;height:200px;margin:0 auto}.creds{justify-content:center}}
+.cred{background:var(--cream);border:1px solid var(--cream2);border-radius:100px;padding:5px 16px;font:700 .78rem/1 'Heebo',sans-serif;color:var(--navy)}
+@media(max-width:640px){
+  .about-grid{grid-template-columns:1fr;text-align:center}
+  .about-img{width:160px;height:200px;margin:0 auto 28px}
+  .creds{justify-content:center}
+}
 
 /* ── PRICING ── */
-.pricing-box{max-width:580px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 28px 80px rgba(30,42,56,.2),0 0 0 3px var(--gold)}
-.pricing-head{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:36px 40px;text-align:center}
-.pricing-head h2{color:#fff;font-size:1.45rem;margin-bottom:8px}
-.pricing-head p{color:rgba(255,255,255,.65);font-size:.88rem}
-.pricing-body{padding:36px 40px}
-.p-price{text-align:center;margin-bottom:8px}
-.p-price .big{font-size:3.6rem;font-weight:900;color:var(--navy);line-height:1}
-.p-price .sym{font-size:1.8rem;vertical-align:top;margin-top:8px;display:inline-block;font-weight:700;color:var(--navy)}
-.p-price .old{font-size:1.1rem;color:#bbb;text-decoration:line-through;margin-left:12px}
-.p-note{text-align:center;color:var(--brown);font:600 .85rem/1 'Heebo',sans-serif;margin-bottom:24px}
-.p-features{list-style:none;margin-bottom:28px}
-.p-features li{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid #f2f2f2;font-size:.92rem;color:#333}
-.p-features li:last-child{border-bottom:none}
-.p-features li::before{content:'✓';width:22px;height:22px;background:var(--gold);border-radius:50%;color:var(--navy);font:900 .73rem/1 'Heebo',sans-serif;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.p-mockup{width:100%;border-radius:12px;margin-bottom:24px;box-shadow:0 8px 32px rgba(30,42,56,.15)}
-.p-secure{background:var(--cream);border-radius:10px;padding:14px;text-align:center;font-size:.82rem;color:#777;margin-top:16px}
-.p-secure strong{color:var(--navy)}
-@media(max-width:540px){.pricing-body{padding:28px 22px}.pricing-head{padding:28px 22px}}
+.pricing-card{max-width:620px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 32px 90px rgba(30,42,56,.22),0 0 0 3px var(--gold)}
+.pc-head{background:linear-gradient(145deg,var(--navy3),var(--navy));padding:38px 42px 30px;text-align:center;position:relative}
+.pc-head::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(218,186,136,.4),transparent)}
+.pc-head h2{color:#fff;font-size:1.5rem;margin-bottom:6px}
+.pc-head p{color:rgba(255,255,255,.6);font-size:.88rem}
+.pc-badge{display:inline-block;background:var(--red);color:#fff;border-radius:100px;padding:5px 14px;font:700 .72rem/1 'Heebo',sans-serif;margin-bottom:14px;letter-spacing:.04em}
+.pc-body{padding:38px 42px}
+.pc-price{text-align:center;margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:12px}
+.pc-price .big{font:900 4rem/1 'Heebo',sans-serif;color:var(--navy)}
+.pc-price .sym{font:700 1.8rem/1 'Heebo',sans-serif;color:var(--navy);align-self:flex-start;margin-top:8px}
+.pc-price .old{font-size:1.15rem;color:#bbb;text-decoration:line-through;align-self:center}
+.pc-note{text-align:center;font:600 .83rem/1 'Heebo',sans-serif;color:var(--brown);margin-bottom:22px}
+.pc-mockup{width:100%;border-radius:12px;margin-bottom:26px;box-shadow:0 8px 36px rgba(30,42,56,.14)}
+.pc-feat{list-style:none;margin-bottom:26px}
+.pc-feat li{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid #f0f0f0;font-size:.92rem;color:#333}
+.pc-feat li:last-child{border-bottom:none}
+.pc-feat li::before{content:'✓';min-width:22px;height:22px;background:var(--gold);border-radius:50%;color:var(--navy);font:900 .72rem/22px 'Heebo',sans-serif;text-align:center;display:inline-block;flex-shrink:0}
+.pc-feat li b{color:var(--navy);font-weight:800}
+.pc-secure{background:var(--cream);border-radius:10px;padding:14px;text-align:center;font-size:.8rem;color:#777;margin-top:14px;line-height:1.6}
+.pc-secure strong{color:var(--navy)}
+@media(max-width:540px){.pc-body,.pc-head{padding:28px 22px}}
 
 /* ── FAQ ── */
-.faq-wrap{max-width:720px;margin:0 auto}
+.faq-wrap{max-width:740px;margin:0 auto}
 .faq-item{border-bottom:1px solid rgba(30,42,56,.1)}
-.faq-btn{width:100%;background:none;border:none;text-align:right;padding:20px 0;font:700 1rem/1.3 'Heebo',sans-serif;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.faq-ico{width:28px;height:28px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy);flex-shrink:0;transition:transform .3s,background .3s}
-.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--gold)}
+.faq-item:last-child{border-bottom:none}
+.faq-btn{width:100%;background:none;border:none;text-align:right;padding:20px 0;font:700 1rem/1.35 'Heebo',sans-serif;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-ico{min-width:28px;height:28px;border-radius:50%;background:var(--cream2);color:var(--navy);font:900 1.1rem/28px 'Heebo',sans-serif;text-align:center;flex-shrink:0;transition:transform .3s,background .3s,color .3s}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--gold);color:var(--navy)}
 .faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faq-item.open .faq-ans{max-height:240px}
-.faq-ans-in{padding-bottom:18px;font-size:.93rem;color:#555;line-height:1.8}
+.faq-item.open .faq-ans{max-height:260px}
+.faq-ans-in{padding-bottom:20px;font-size:.94rem;color:#555;line-height:1.82}
 
 /* ── FINAL CTA ── */
-.final{background:linear-gradient(135deg,var(--navy3) 0%,var(--navy) 100%);padding:88px 20px;text-align:center}
-.final h2{color:#fff;font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:14px}
-.final p{color:rgba(255,255,255,.68);font-size:1.03rem;max-width:560px;margin:0 auto 36px;line-height:1.8}
-.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:10px;padding:15px 32px;font:800 1rem/1 'Heebo',sans-serif;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.35);transition:transform .25s,box-shadow .25s}
-.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,211,102,.5)}
-.or{color:rgba(255,255,255,.35);margin:18px 0;font-size:.85rem}
+.final{background:linear-gradient(155deg,var(--navy3) 0%,var(--navy) 100%);padding:96px 20px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(218,186,136,.08) 0%,transparent 65%);top:-150px;right:-150px;pointer-events:none}
+.final h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:900;margin-bottom:14px;position:relative}
+.final h2 em{font-style:normal;color:var(--gold)}
+.final p{color:rgba(255,255,255,.68);font-size:1.04rem;max-width:580px;margin:0 auto 36px;line-height:1.82;position:relative}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;border-radius:10px;padding:15px 32px;font:800 1rem/1 'Heebo',sans-serif;text-decoration:none;box-shadow:0 6px 28px rgba(37,211,102,.4);transition:transform .25s,box-shadow .25s}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(37,211,102,.55)}
+.or-div{color:rgba(255,255,255,.3);margin:16px 0;font-size:.85rem;position:relative}
+.final-cta-big{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);border-radius:12px;padding:19px 52px;font:900 1.18rem/1 'Heebo',sans-serif;text-decoration:none;box-shadow:var(--sg);transition:transform .25s,box-shadow .25s;margin-bottom:14px;position:relative}
+.final-cta-big:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(218,186,136,.55)}
+
+/* ── RISK REVERSAL ── */
+.rr-box{max-width:580px;margin:32px auto 0;background:rgba(218,186,136,.07);border:1px solid rgba(218,186,136,.25);border-radius:var(--r);padding:20px 24px;display:flex;gap:14px;align-items:center}
+.rr-icon{font-size:2.4rem;flex-shrink:0}
+.rr-box p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.7}
+.rr-box strong{color:var(--gold)}
 
 /* ── FOOTER ── */
-footer{background:#080f16;color:rgba(255,255,255,.4);text-align:center;padding:26px 20px;font-size:.8rem;line-height:1.9}
+footer{background:#060d14;color:rgba(255,255,255,.38);text-align:center;padding:28px 20px;font-size:.78rem;line-height:2}
 footer a{color:var(--gold);text-decoration:none}
 
 /* ── MODAL ── */
-.modal-bg{position:fixed;inset:0;background:rgba(8,15,22,.75);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-bg{position:fixed;inset:0;background:rgba(6,13,20,.82);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
 .modal-bg.open{opacity:1;pointer-events:all}
-.modal{background:#fff;border-radius:20px;padding:40px 36px;max-width:460px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.45);position:relative;transform:scale(.92);transition:transform .3s}
+.modal{background:#fff;border-radius:22px;padding:42px 38px;max-width:460px;width:100%;box-shadow:0 40px 90px rgba(0,0,0,.5);position:relative;transform:scale(.9);transition:transform .3s}
 .modal-bg.open .modal{transform:scale(1)}
-.modal-x{position:absolute;top:14px;left:18px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;line-height:1}
-.modal h3{font-size:1.35rem;color:var(--navy);margin-bottom:8px}
-.modal p{font-size:.88rem;color:#666;margin-bottom:22px;line-height:1.6}
-@media(max-width:480px){.modal{padding:30px 22px}}
+.modal::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:22px 22px 0 0}
+.modal-x{position:absolute;top:14px;left:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#bbb;line-height:1}
+.modal h3{font:900 1.35rem/1 'Heebo',sans-serif;color:var(--navy);margin-bottom:7px}
+.modal p{font-size:.88rem;color:#666;margin-bottom:22px;line-height:1.65}
+@media(max-width:480px){.modal{padding:32px 22px}}
+
+/* ── INLINE CTA STRIP ── */
+.cta-strip{background:linear-gradient(135deg,var(--navy),var(--navy2));border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);padding:36px 20px;text-align:center}
+.cta-strip p{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:18px;font-weight:600}
+.cta-strip p strong{color:var(--gold)}
 </style>
 </head>
 <body>
 
-<!-- STICKY MOBILE BAR -->
-<div class="sticky">
-  <div class="sticky-txt"><s>₪695</s> ₪49 בלבד</div>
-  <button class="sticky-btn" onclick="openModal()">אני רוצה להתחיל ←</button>
+<!-- STICKY MOBILE -->
+<div class="sticky-mob">
+  <div class="sm-txt"><s>₪695</s> <b>₪49</b> — 3 תשלומים</div>
+  <button class="sm-btn" onclick="openModal()">קבל גישה ←</button>
 </div>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
+  <div class="nav-i">
     <a href="#" class="logo">
-      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/image.png" alt="סוזן בכר" class="logo-img" onerror="this.style.display='none'"/>
-      <div class="logo-txt">ערכת המאסטר<span>סוזן בכר</span></div>
+      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/image.png" alt="סוזן בכר" class="logo-av" onerror="this.style.display='none'"/>
+      <div class="logo-name">ערכת המאסטר <small>סוזן בכר | ייעוץ ארגוני</small></div>
     </a>
-    <a href="#pricing" class="nav-cta">קבל גישה — ₪49</a>
+    <a href="#pricing" class="nav-btn">לרכישה — ₪49 בלבד</a>
   </div>
 </nav>
 
-<!-- URGENCY -->
-<div class="urgency">⚡ מחיר השקה מוגבל! <b>נותרו מקומות אחרונים</b> — אחרי זה המחיר חוזר ל-₪695</div>
+<!-- URGENCY BAR -->
+<div class="urg">
+  ⚡ <span class="count-box">מחיר עולה בעוד: <span id="countdown">23:47:12</span></span>
+  <b>מחיר השקה מוגבל</b> — נותרו מקומות אחרונים לפני שהמחיר חוזר ל-₪695
+</div>
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
   <div class="hero-inner">
 
-    <!-- TEXT + FORM (right) -->
-    <div class="reveal">
-      <div class="hero-badge">🔑 ערכת המאסטר MASTER KIT</div>
-      <h1>להפסיק לרדוף אחרי <em>לקוחות קטנים</em> ולהפוך לספק מבוקש בארגונים וחברות</h1>
-      <p class="hero-sub">גם אם אין לך קשרים, פרוטקציות, או ניסיון קודם בשוק הארגוני</p>
-      <div class="hero-bullets">
-        <span class="bullet">גישה מיידית למייל</span>
-        <span class="bullet">7 כלים מעשיים</span>
-        <span class="bullet">ללא ניסיון קודם</span>
-        <span class="bullet">תוצאות מיידיות</span>
+    <!-- TEXT + FORM -->
+    <div class="r0">
+      <div class="hero-eyebrow">🔑 ערכת המאסטר MASTER KIT</div>
+      <h1>להפסיק לרדוף אחרי <em>לקוחות קטנים</em> — ולהפוך ל<u>ספק מבוקש</u> בארגונים וחברות</h1>
+      <p class="hero-sub">גם אם אין לך קשרים, פרוטקציות, או ניסיון קודם בשוק הארגוני.<br/><strong>בדיוק כפי שסוזן בכר עשתה — ועכשיו גם אתה יכול.</strong></p>
+
+      <div class="hero-promise">
+        🎯 <strong>ההבטחה שלי אליך:</strong> ב-7 כלים מעשיים שתקבל עכשיו, תדע בדיוק למי לפנות, מה לאמר, ואיך לתמחר — ותוכל לצאת לעבוד עם ארגונים עוד השבוע.
       </div>
 
-      <div class="form-card">
-        <div class="fc-title">קבל גישה מיידית לערכה</div>
-        <div class="fc-sub">מחיר השקה — לזמן מוגבל בלבד</div>
-        <div class="price-row">
-          <span class="price-old">₪695</span>
-          <span class="price-new">₪49</span>
+      <div class="hero-ticks">
+        <span class="ht">גישה מיידית למייל</span>
+        <span class="ht">7 כלים מעשיים</span>
+        <span class="ht">ללא ניסיון קודם</span>
+        <span class="ht">לכל תחום ועסק</span>
+        <span class="ht">תוצאות בשבוע הראשון</span>
+      </div>
+
+      <!-- FORM -->
+      <div class="fc">
+        <div class="fc-hd">קבל גישה מיידית לערכה המלאה</div>
+        <div class="fc-sd">מחיר השקה — עוד מעט עולה חזרה ל-₪695</div>
+        <div class="fc-price">
+          <span class="p-save">חסכון 93%</span>
+          <span class="p-old">₪695</span>
+          <span class="p-new">₪49</span>
         </div>
-        <div class="price-note">*3 תשלומים נוחים של ₪16.33</div>
+        <div class="fc-installment">*3 תשלומים נוחים של ₪16.33 בלבד | כרטיס אשראי / PayPal</div>
         <form onsubmit="handleForm(event)">
-          <div class="fi"><input type="email" placeholder="כתובת אימייל *" required id="h-email"/></div>
-          <div class="fi"><input type="tel" placeholder="מספר טלפון *" required id="h-phone"/></div>
-          <button type="submit" class="btn-gold">לרכישה ← קבל גישה מיידית</button>
+          <div class="fi"><input type="email" placeholder="📧 כתובת אימייל" required id="h-email"/></div>
+          <div class="fi"><input type="tel" placeholder="📱 מספר טלפון" required id="h-phone"/></div>
+          <button type="submit" class="btn-cta">אני רוצה להתחיל עכשיו ← קבל גישה מיידית</button>
         </form>
-        <div class="fc-secure">🔒 רכישה מאובטחת | גישה מיידית | ביטול בכל עת</div>
+        <div class="fc-secure">🔒 תשלום מאובטח | גישה מיידית למייל | פרטיות מלאה</div>
       </div>
     </div>
 
-    <!-- KIT IMAGE (left) -->
-    <div class="kit-visual reveal d2">
-      <div class="kit-glow"></div>
-      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/erka1.png" alt="ערכת המאסטר" loading="eager"/>
+    <!-- KIT IMAGE -->
+    <div class="kit-wrap r0 d3">
+      <div class="kit-badge">השקה<br/><small>₪49 בלבד</small></div>
+      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/erka1.png" alt="ערכת המאסטר" class="hero-kit-img" loading="eager"
+           onerror="this.src='https://suzanb.co.il/wp-content/uploads/2025/01/mocup2_small.png'"/>
     </div>
-
   </div>
 </section>
 
-<!-- COUNTER STRIP -->
-<div class="counter">
-  <div class="counter-inner">
-    <div class="cnt reveal">
-      <div class="cnt-num"><span id="c1">0</span>+</div>
-      <div class="cnt-lbl">בעלי עסקים שנכנסו לארגונים</div>
+<!-- COUNTER -->
+<div style="background:var(--cream);padding:38px 20px">
+  <div style="max-width:820px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap">
+    <div class="r0" style="text-align:center">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1"><span id="c1">0</span>+</div>
+      <div style="font-size:.82rem;color:#777;margin-top:5px">בעלי עסקים שנכנסו לארגונים</div>
     </div>
-    <div class="cnt reveal d2">
-      <div class="cnt-num"><span id="c2">0</span></div>
-      <div class="cnt-lbl">כלים מעשיים בערכה</div>
+    <div class="r0 d2" style="text-align:center">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1"><span id="c2">0</span></div>
+      <div style="font-size:.82rem;color:#777;margin-top:5px">כלים מעשיים בערכה</div>
     </div>
-    <div class="cnt reveal d3">
-      <div class="cnt-num">x<span id="c3">0</span></div>
-      <div class="cnt-lbl">ממוצע החזר על ההשקעה</div>
+    <div class="r0 d3" style="text-align:center">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1">x<span id="c3">0</span></div>
+      <div style="font-size:.82rem;color:#777;margin-top:5px">ממוצע החזר על ההשקעה</div>
+    </div>
+    <div class="r0 d4" style="text-align:center">
+      <div style="font-size:2.8rem;font-weight:900;color:var(--navy);line-height:1">₪<span id="c4">0</span>K+</div>
+      <div style="font-size:.82rem;color:#777;margin-top:5px">הכנסות ממוצעות מעסקת ארגון ראשונה</div>
     </div>
   </div>
 </div>
 
-<!-- PAIN POINTS -->
-<section class="section cream">
+<!-- BEFORE / AFTER -->
+<section class="sec">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">המציאות הכואבת</div>
-      <h2 class="sec-title">למה עסקים מוכשרים נכשלים לפרוץ לארגונים?</h2>
-      <p class="sec-sub">יש לך ערך אדיר להציע, אבל משהו בדרך פשוט לא עובד…</p>
+    <div class="sh r0">
+      <div class="tag red">לפני ואחרי</div>
+      <h2 class="h2">זה ההבדל בין מי שנשאר תקוע לבין מי שנכנס לארגונים</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col ba-before r0 d1">
+        <div class="ba-label">❌ בלי הערכה — היום</div>
+        <ul class="ba-list">
+          <li><span>😓</span> רודף אחרי לקוחות קטנים שמתמקחים על כל שקל</li>
+          <li><span>😓</span> לא יודע למי לפנות בארגון ומתחיל מאפס כל פעם</li>
+          <li><span>😓</span> מתמחר בהימור — לא יודע כמה לבקש</li>
+          <li><span>😓</span> נתקע בהתנגדות "אין תקציב" ולא יודע מה לענות</li>
+          <li><span>😓</span> פוחד שיראו אותו כ"קטן מדי" או "לא מספיק מקצועי"</li>
+          <li><span>😓</span> מרגיש שהשפה הארגונית זרה ולא מצליח להתחבר</li>
+        </ul>
+      </div>
+      <div class="ba-col ba-after r0 d2">
+        <div class="ba-label">✅ עם ערכת המאסטר — עוד השבוע</div>
+        <ul class="ba-list">
+          <li><span>🚀</span> פונה לאנשי המפתח הנכונים בארגון בדיוק</li>
+          <li><span>🚀</span> יודע מה לשאול כדי לחשוף תקציב ולסגור עסקה</li>
+          <li><span>🚀</span> מתמחר בביטחון עם טבלת הקסם המוכחת</li>
+          <li><span>🚀</span> מטפל בכל התנגדות בתשובות מוכנות ומוכחות</li>
+          <li><span>🚀</span> מציג את עצמו בשפה ארגונית מקצועית</li>
+          <li><span>🚀</span> חותם חוזים ארוכי טווח עם ארגונים גדולים</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="sec cream">
+  <div class="wrap">
+    <div class="sh r0">
+      <div class="tag">למה זה קורה?</div>
+      <h2 class="h2">5 מחסומים שמונעים מבעלי עסקים מוכשרים לפרוץ לארגונים</h2>
+      <p class="sub">אלו לא רק "חששות" — זו המציאות ששורפת לך זמן וכסף בכל יום מחדש</p>
     </div>
     <div class="pain-grid">
-      <div class="pain-card reveal d1">
-        <div class="pain-icon">🚪</div>
+      <div class="pain-card r0 d1">
+        <div class="pi">🚪</div>
         <div>
           <h3>לא יודעים למי לפנות</h3>
-          <p>הכרת אנשי המפתח בארגונים היא אחד האתגרים הגדולים ביותר — לא ברור מי מקבל ההחלטות.</p>
+          <p>הכרת אנשי המפתח בארגונים היא אחד האתגרים הגדולים ביותר. לא ברור מי מקבל ההחלטות ומי "שומר הסף" שיעצור אותך.</p>
         </div>
       </div>
-      <div class="pain-card reveal d2">
-        <div class="pain-icon">💰</div>
+      <div class="pain-card r0 d2">
+        <div class="pi">💰</div>
         <div>
           <h3>התמחור מרגיש כמו הימור</h3>
-          <p>גבוה מדי ותאבד את העסקה. נמוך מדי ותחתור תחת עצמך. נקודת האיזון לא ברורה.</p>
+          <p>גבוה מדי — תאבד את העסקה. נמוך מדי — תחתור תחת עצמך. חוסר הידיעה איך לתמחר שירותים מול ארגון עולה לך עסקאות שלמות.</p>
         </div>
       </div>
-      <div class="pain-card reveal d3">
-        <div class="pain-icon">😰</div>
+      <div class="pain-card r0 d3">
+        <div class="pi">😰</div>
         <div>
-          <h3>פחד מ"לא מספיק מקצועי"</h3>
-          <p>תסמונת המתחזה — מרגישים שאולי הארגונים יראו אתכם כ"חובבנים" וידחו אתכם.</p>
+          <h3>תסמונת המתחזה</h3>
+          <p>מרגישים שאולי הארגונים יראו אתכם כ"חובבנים". הפחד הזה מונע פנייה יזומה ומשאיר אתכם בצד בזמן שאחרים נכנסים.</p>
         </div>
       </div>
-      <div class="pain-card reveal d4">
-        <div class="pain-icon">🗣️</div>
+      <div class="pain-card r0 d4">
+        <div class="pi">🗣️</div>
         <div>
-          <h3>השפה הארגונית — זרה לחלוטין</h3>
-          <p>לא יודעים איך להציג את השירות בשפה שמדברת ללב אנשי הארגון ומניעה לפעולה.</p>
+          <h3>השפה הארגונית — זרה</h3>
+          <p>ארגונים "מדברים" בשפה אחרת. לא יודעים איך להציג את השירות בצורה שמדברת אליהם ומניעה לפעולה. כתוצאה — נדחים.</p>
         </div>
       </div>
-      <div class="pain-card reveal d5">
-        <div class="pain-icon">❌</div>
+      <div class="pain-card r0 d5">
+        <div class="pi">❌</div>
         <div>
           <h3>פחד מדחייה</h3>
-          <p>הפחד ממה שיחשבו ויגידו מונע פנייה יזומה ומשאיר אתכם תקועים בלי להתקדם.</p>
+          <p>"ואם יגידו לי לא?" — הפחד הזה מונע פנייה יזומה לחלוטין. רוב בעלי העסקים לא פונים בכלל כי הם לא יודעים איך להתמודד עם דחייה.</p>
         </div>
       </div>
-      <div class="pain-card dark reveal d6">
-        <div class="pain-icon">🔑</div>
+      <div class="pain-card r0 d6" style="background:linear-gradient(135deg,var(--navy),var(--navy2));border-color:var(--navy)">
+        <div class="pi" style="background:rgba(218,186,136,.12)">🔑</div>
         <div>
-          <h3>זה לא באשמתך</h3>
-          <p>נפלת קורבן ל"תסמונת הדלת הנעולה". ארגונים היום מחפשים בדיוק ספקים כמוך — גמישים, יצירתיים, מלאי ערך.</p>
+          <h3 style="color:var(--gold)">זה לא באשמתך — אבל זו אחריותך לשנות</h3>
+          <p style="color:rgba(255,255,255,.75)">נפלת קורבן ל"תסמונת הדלת הנעולה". ארגונים היום פתוחים יותר מתמיד לעסקים קטנים. הם צריכים אותך — אתה רק צריך את הכלים הנכונים.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG QUOTE -->
+<section class="sec dark">
+  <div class="wrap">
+    <div class="big-quote r0">
+      <span class="bq-mark">"</span>
+      <p class="bq-text">ארגונים מחפשים <em>נואשות</em> פתרונות איכותיים מספקים גמישים ויצירתיים. הם מחפשים אותך — אתה רק לא יודע איך להגיע אליהם עדיין.</p>
+      <div class="bq-author">— סוזן בכר, מומחית ייעוץ ארגוני</div>
     </div>
   </div>
 </section>
 
 <!-- WHAT'S INSIDE -->
-<section class="section navy">
+<section class="sec navy">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sh r0">
       <div class="tag">מה בפנים</div>
-      <h2 class="sec-title white">7 כלים שיהפכו אותך למאסטר בשוק הארגונים</h2>
-      <p class="sec-sub white">לא תיאוריות מנופחות — ארגז כלים לביצוע מיידי, מזוקק מתוך שנים של עבודה בשטח</p>
+      <h2 class="h2 white">7 כלים שיהפכו אותך למאסטר בשוק הארגונים</h2>
+      <p class="sub white">לא תיאוריות — ארגז כלים מעשי לביצוע מיידי, מזוקק מתוך שנים של עבודה בשטח</p>
     </div>
-    <div class="kit-grid">
+    <div class="kit-gallery">
 
-      <div class="kit-item reveal d1">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/10-qa.png" alt="10 שאלות קריטיות" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">01</div>
+      <div class="kg-item r0 d1">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/10-qa.png" alt="10 שאלות" loading="lazy"/></div>
+        <div class="kg-body">
+          <div class="kg-num">01</div>
           <h3>10 השאלות הקריטיות</h3>
-          <p>תדע בדיוק מה לשאול כדי לחשוף את הצרכים האמיתיים של הארגון, התקציב החבוי והאנשים שמקבלים ההחלטה.</p>
+          <p>תדע בדיוק מה לשאול כדי לחשוף את הצרכים האמיתיים, התקציב החבוי והאנשים שמקבלים ההחלטה. זה לבד יחסוך לך שעות של עבודה מיותרת.</p>
+          <span class="kg-value">שווי: ₪197</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d2">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/%D7%94%D7%AA%D7%A0%D7%92%D7%93%D7%95%D7%99%D7%95%D7%AA2.png" alt="30 התנגדויות" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">02</div>
+      <div class="kg-item r0 d2">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/%D7%94%D7%AA%D7%A0%D7%92%D7%93%D7%95%D7%99%D7%95%D7%AA2.png" alt="30 התנגדויות" loading="lazy" onerror="this.src='https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-112.png'"/></div>
+        <div class="kg-body">
+          <div class="kg-num">02</div>
           <h3>חוברת 30 ההתנגדויות</h3>
-          <p>"אין לנו תקציב", "אנחנו עובדים עם מישהו אחר" — תשובות מדויקות לכל התנגדות. לעולם לא תיתפס לא מוכן.</p>
+          <p>"אין לנו תקציב", "אנחנו עובדים עם מישהו אחר", "תשלח חומרים ונחזור אליך" — תשובות מדויקות לכל התנגדות. לעולם לא תיתפס לא מוכן.</p>
+          <span class="kg-value">שווי: ₪247</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d3">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/%D7%A9%D7%99%D7%A2%D7%95%D7%A8.png" alt="הקלטת סשן" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">03</div>
+      <div class="kg-item r0 d3">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/%D7%A9%D7%99%D7%A2%D7%95%D7%A8.png" alt="הקלטת סשן" loading="lazy" onerror="this.src='https://suzanb.co.il/wp-content/uploads/2025/01/bonus1.png'"/></div>
+        <div class="kg-body">
+          <div class="kg-num">03</div>
           <h3>הקלטת סשן ההדרכה</h3>
-          <p>"נכנסים לעבודה עם ארגונים" — ראי את הכלים מיושמים בפועל. הניואנסים שעושים את ההבדל בין הצעה חובבנית לחוזה שנחתם.</p>
+          <p>"נכנסים לעבודה עם ארגונים" — לא רק תיאוריה. ראי את הכלים מיושמים בפועל. הניואנסים שעושים ההבדל בין הצעה חובבנית לחוזה שנחתם.</p>
+          <span class="kg-value">שווי: ₪397</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d4">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-11.png" alt="מצגת הדרכה" loading="lazy"
-               onerror="this.src='https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-112.png'"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">04</div>
+      <div class="kg-item r0 d4">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-11.png" alt="מצגת הדרכה" loading="lazy" onerror="this.src='https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-112.png'"/></div>
+        <div class="kg-body">
+          <div class="kg-num">04</div>
           <h3>מצגת הדרכה מלאה</h3>
-          <p>לצפייה חוזרת בכל עת. הכל מוסבר צעד אחר צעד — ברור, מיישם, ומוכן לפעולה מיידית.</p>
+          <p>לצפייה חוזרת בכל עת. הכל מוסבר צעד אחר צעד — ברור, מיישם מיידית, ומרוכז במקום אחד.</p>
+          <span class="kg-value">שווי: ₪197</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d5">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-112.png" alt="דף עבודה BIG5" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">05</div>
+      <div class="kg-item r0 d5">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/BIG5-112.png" alt="BIG 5" loading="lazy"/></div>
+        <div class="kg-body">
+          <div class="kg-num">05</div>
           <h3>דף עבודה BIG 5</h3>
-          <p>יזקק את המסר שלך למשהו חד, קולע ובלתי ניתן להתעלמות. תפסיק למכור שירותים — תתחיל למכור פתרונות.</p>
+          <p>יזקק את המסר שלך למשהו חד, קולע ובלתי ניתן להתעלמות. תפסיק למכור "שירותים" — ותתחיל למכור פתרונות שמנהלים לא יכולים לסרב להם.</p>
+          <span class="kg-value">שווי: ₪147</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d6">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/bonus1.png" alt="Magic Table" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">06</div>
+      <div class="kg-item r0 d6">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/bonus1.png" alt="Magic Table" loading="lazy"/></div>
+        <div class="kg-body">
+          <div class="kg-num">06</div>
           <h3>Magic Table — תכנון שנתי</h3>
-          <p>כלי תכנון מעשי שעובד. תבנה תוכנית שנתית ברורה ותמקסם את הסיכויים לקבלת כל עסקה.</p>
+          <p>כלי תכנון מעשי שעובד. תבנה תוכנית שנתית ברורה, תמקסם הסיכויים לקבלת עסקאות, ותבין בדיוק את שווי השירות שלך.</p>
+          <span class="kg-value">שווי: ₪197</span>
         </div>
       </div>
 
-      <div class="kit-item reveal d7">
-        <div class="kit-img">
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/Group-137.png" alt="סרטוני בונוס" loading="lazy"/>
-        </div>
-        <div class="kit-body">
-          <div class="kit-num-badge">07</div>
-          <h3>סרטוני בונוס</h3>
-          <p>טיפים מהירים ליישום מיידי — כל בעל עסק חייב להכיר. צפה בכל סרטון בנפרד בדיוק כשצריך.</p>
+      <div class="kg-item r0 d7">
+        <div class="kg-img"><img src="https://suzanb.co.il/wp-content/uploads/2025/01/Group-137.png" alt="סרטוני בונוס" loading="lazy"/></div>
+        <div class="kg-body">
+          <div class="kg-num">07</div>
+          <h3>סרטוני בונוס 🎁</h3>
+          <p>טיפים מהירים ליישום מיידי — כל בעל עסק חייב להכיר. ניתן לצפות בכל סרטון בנפרד, בדיוק כשצריך, בדרך לפגישה.</p>
+          <span class="kg-value">שווי: ₪97</span>
         </div>
       </div>
 
     </div>
 
-    <!-- MOCUP BANNER -->
-    <div class="reveal" style="margin-top:52px;text-align:center">
-      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/mocup2_small.png" alt="ערכת המאסטר - כל הכלים" loading="lazy"
-           style="max-width:100%;border-radius:16px;box-shadow:0 16px 56px rgba(218,186,136,.25)"/>
+    <!-- MOCUP -->
+    <div class="r0" style="margin-top:52px;text-align:center">
+      <img src="https://suzanb.co.il/wp-content/uploads/2025/01/mocup2_small.png" alt="כל הכלים" loading="lazy"
+           style="max-width:100%;border-radius:16px;box-shadow:0 16px 60px rgba(218,186,136,.28)"/>
     </div>
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="section cream">
+<!-- VALUE STACK -->
+<section class="sec dark">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">למה ארגונים?</div>
-      <h2 class="sec-title">מה קורה כשאתה נכנס לשוק הארגוני</h2>
+    <div class="sh r0">
+      <div class="tag">שווי הערכה</div>
+      <h2 class="h2 white">מה שאתה מקבל — לעומת מה שאתה משלם</h2>
+      <p class="sub white">כשרכשת ייעוץ פרטי, שילמת אלפים על פחות מזה. כאן תקבל הכל בפחות מ-₪50</p>
     </div>
-    <div class="ben-grid">
-      <div class="ben-item reveal d1"><div class="ben-check">✓</div><p>חוזים ארוכי טווח במקום ריצה אינסופית אחרי לקוחות חדשים</p></div>
-      <div class="ben-item reveal d2"><div class="ben-check">✓</div><p>תקציבים משמעותיים שמאפשרים לך להתפתח ולצמוח</p></div>
-      <div class="ben-item reveal d3"><div class="ben-check">✓</div><p>יציבות כלכלית — ארגונים משלמים בזמן ובסכומים קבועים</p></div>
-      <div class="ben-item reveal d4"><div class="ben-check">✓</div><p>הרחבת שירותים בתוך אותו ארגון — הכנסה גדלה ללא עלות שיווק</p></div>
-      <div class="ben-item reveal d5"><div class="ben-check">✓</div><p>מוניטין שפותח דלתות לארגונים נוספים — הפניות מגיעות אליך</p></div>
-      <div class="ben-item reveal d6"><div class="ben-check">✓</div><p>פחות השקעה בשיווק, יותר זמן לעשייה שאתה אוהב</p></div>
+    <div class="vs-box r0">
+      <div class="vs-row"><span class="vs-name">10 השאלות הקריטיות</span><span class="vs-price">₪197</span></div>
+      <div class="vs-row"><span class="vs-name">חוברת 30 ההתנגדויות</span><span class="vs-price">₪247</span></div>
+      <div class="vs-row"><span class="vs-name">הקלטת סשן ההדרכה</span><span class="vs-price">₪397</span></div>
+      <div class="vs-row"><span class="vs-name">מצגת הדרכה מלאה</span><span class="vs-price">₪197</span></div>
+      <div class="vs-row"><span class="vs-name">דף עבודה BIG 5</span><span class="vs-price">₪147</span></div>
+      <div class="vs-row"><span class="vs-name">Magic Table — תכנון שנתי</span><span class="vs-price">₪197</span></div>
+      <div class="vs-row"><span class="vs-name">סרטוני בונוס</span><span class="vs-price">₪97</span></div>
+      <div class="vs-total-row">
+        <span class="vs-total-lbl">שווי כולל</span>
+        <span class="vs-total-price">₪1,479</span>
+      </div>
+    </div>
+    <div class="r0" style="text-align:center;margin-top:32px">
+      <div style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:8px">אתה משלם היום:</div>
+      <div style="font-size:4.5rem;font-weight:900;color:var(--gold);line-height:1">₪49</div>
+      <div style="font-size:.88rem;color:rgba(255,255,255,.5);margin-top:6px">*3 תשלומים נוחים | חיסכון של 97%</div>
+      <div style="margin-top:24px">
+        <a href="#pricing" class="final-cta-big" style="margin:0">אני רוצה גישה עכשיו ←</a>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- INLINE CTA STRIP -->
+<div class="cta-strip">
+  <p>עשרות בעלי עסקים כבר נכנסו לארגונים. <strong>מחיר ₪49 — לזמן מוגבל בלבד.</strong></p>
+  <a href="#pricing" class="btn-cta" style="display:inline-block;width:auto;padding:15px 40px;border-radius:10px;text-decoration:none;font:900 1rem/1 'Heebo',sans-serif;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:var(--sg)">
+    קבל גישה מיידית ← ₪49
+  </a>
+</div>
 
 <!-- TESTIMONIALS -->
-<section class="section">
+<section class="sec cream">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">מה הלקוחות אומרים</div>
-      <h2 class="sec-title">כבר עשרות בעלי עסקים נכנסו לארגונים בזכות הערכה</h2>
+    <div class="sh r0">
+      <div class="tag">הוכחה חברתית</div>
+      <h2 class="h2">מה הלקוחות אומרים — במספרים אמיתיים</h2>
+      <p class="sub">לא סיסמאות — תוצאות מדידות של אנשים ממש כמוך</p>
     </div>
     <div class="tes-grid">
-      <div class="tes-card reveal d1">
-        <div class="tes-stars">★★★★★</div>
-        <p class="tes-text">"תוך חודשיים מהקורס סגרתי חוזה עם חברת הייטק מובילה. ההחזר על ההשקעה היה פי 20! לא האמנתי שזה יקרה כל כך מהר."</p>
-        <div class="tes-author">
-          <div class="tes-av">ר</div>
-          <div><div class="tes-name">רונית כ.</div><div class="tes-role">מאמנת ארגונית</div></div>
+      <div class="tc r0 d1">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-result">🏆 תוצאה: חוזה פי 20 על ההשקעה תוך חודשיים</div>
+        <p class="tc-text">"לא האמנתי שזה יקרה כל כך מהר. תוך חודשיים מהקורס סגרתי חוזה עם חברת הייטק מובילה. ההחזר על ההשקעה היה פי 20! הכלים של סוזן ישירים, מעשיים, ועובדים."</p>
+        <div class="tc-author">
+          <div class="tc-av">ר</div>
+          <div><div class="tc-name">רונית כ.</div><div class="tc-role">מאמנת ארגונית</div></div>
         </div>
       </div>
-      <div class="tes-card reveal d2">
-        <div class="tes-stars">★★★★★</div>
-        <p class="tes-text">"הייתי בטוח שאני קטן מדי לעבוד עם ארגונים גדולים. היום אני מספק שירותים לשלושה בנקים. הכלים של סוזן שינו את כל הגישה שלי."</p>
-        <div class="tes-author">
-          <div class="tes-av">א</div>
-          <div><div class="tes-name">אמיר ש.</div><div class="tes-role">יועץ אבטחת מידע</div></div>
+      <div class="tc r0 d2">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-result">🏆 תוצאה: 3 בנקים כלקוחות קבועים</div>
+        <p class="tc-text">"הייתי בטוח שאני קטן מדי לעבוד עם ארגונים גדולים. היום אני מספק שירותים לשלושה בנקים. הכלים של סוזן — ובעיקר חוברת ההתנגדויות — שינו את כל הגישה שלי למכירות."</p>
+        <div class="tc-author">
+          <div class="tc-av">א</div>
+          <div><div class="tc-name">אמיר ש.</div><div class="tc-role">יועץ אבטחת מידע</div></div>
         </div>
       </div>
-      <div class="tes-card reveal d3">
-        <div class="tes-stars">★★★★★</div>
-        <p class="tes-text">"הערכה של סוזן עזרה לי לבנות תוכנית עבודה ברורה ולהתחיל לעבוד עם ארגונים גדולים בפחות זמן ויותר כסף. זה שינה לי את העסק!"</p>
-        <div class="tes-author">
-          <div class="tes-av">ד</div>
-          <div><div class="tes-name">דן מ.</div><div class="tes-role">בעל עסק להדרכה</div></div>
+      <div class="tc r0 d3">
+        <div class="tc-stars">★★★★★</div>
+        <div class="tc-result">🏆 תוצאה: פחות זמן, יותר כסף מארגונים</div>
+        <p class="tc-text">"הערכה של סוזן עזרה לי לבנות תוכנית עבודה ברורה ולהתחיל לעבוד עם ארגונים גדולים. ה-Magic Table לבדה שינתה לי את כל ההגיון של התמחור. זה שינה לי את העסק!"</p>
+        <div class="tc-author">
+          <div class="tc-av">ד</div>
+          <div><div class="tc-name">דן מ.</div><div class="tc-role">בעל עסק להדרכה</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT SUZAN -->
-<section class="section cream">
+<!-- WHY NOW -->
+<section class="sec navy">
   <div class="wrap">
-    <div class="about-inner">
-      <div class="reveal-l">
-        <div class="about-img-wrap">
-          <div class="about-glow"></div>
-          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/image-1.png" alt="סוזן בכר" class="about-img" loading="lazy"/>
+    <div class="sh r0">
+      <div class="tag">למה עכשיו?</div>
+      <h2 class="h2 white">4 סיבות שהיום הוא הרגע הנכון ביותר</h2>
+      <p class="sub white">השוק הארגוני פתוח יותר מתמיד — ואתה מחכה בחינם</p>
+    </div>
+    <div class="why-now">
+      <div class="wyn-grid">
+        <div class="wyn-item r0 d1">
+          <span class="wyn-icon">📅</span>
+          <h3>רבעון שני — הזמן לפעול</h3>
+          <p>ארגונים קיבלו תקציבים ומחפשים ספקים. מי שנכנס עכשיו — חוזה לכל השנה.</p>
+        </div>
+        <div class="wyn-item r0 d2">
+          <span class="wyn-icon">📈</span>
+          <h3>תקציבי הדרכה גדלים</h3>
+          <p>בעקבות שינויים בשוק, ארגונים מגדילים השקעה בפיתוח עובדים — הם צריכים אותך.</p>
+        </div>
+        <div class="wyn-item r0 d3">
+          <span class="wyn-icon">🤝</span>
+          <h3>ארגונים פתוחים לעסקים קטנים</span>
+          <h3>ארגונים אוהבים ספקים זריזים</h3>
+          <p>חברות גדולות מעדיפות ספקים קטנים וגמישים על פני חברות ענק. זה היתרון שלך.</p>
+        </div>
+        <div class="wyn-item r0 d4">
+          <span class="wyn-icon">⏰</span>
+          <h3>המחיר עולה בקרוב</h3>
+          <p>₪49 הוא מחיר השקה. כשיגמרו המקומות — המחיר חוזר ל-₪695. אין תאריך שני.</p>
         </div>
       </div>
-      <div class="reveal-r">
+      <div class="wyn-cta-box r0">
+        <p>כל יום שאתה מחכה, מתחרה שלך נכנס לארגון שיכול היה להיות שלך.<br/><strong>הגיע הזמן שתפסיק לצפות מהצד.</strong></p>
+        <a href="#pricing" class="final-cta-big" style="margin:0">אני מוכן — קבל גישה עכשיו ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec cream">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="rl">
+        <div class="about-img-wrap">
+          <div class="about-ring"></div>
+          <img src="https://suzanb.co.il/wp-content/uploads/2025/01/image-1.png" alt="סוזן בכר" class="about-img" loading="lazy" onerror="this.style.display='none'"/>
+          <div class="about-badge">מומחית #1 בשוק הארגוני</div>
+        </div>
+      </div>
+      <div class="rr">
         <div class="tag">מי מאחורי הערכה</div>
         <h2 class="about-h">סוזן בכר</h2>
-        <div class="about-title">מומחית ייעוץ ופיתוח ארגוני</div>
-        <p class="about-p">בחרנו לקרוא לערכה "ערכת המאסטר" מכיוון שהיא מעניקה לך את הכלים הדרושים כדי להפוך למאסטר בעבודה עם ארגונים — ממש כפי שסוזן בכר הפכה למובילה בתחום זה.</p>
-        <p class="about-p">סוזן, עם שנים של ניסיון בהדרכה וייעוץ לארגונים גדולים, בנתה את הערכה כך שתעביר לך את כל הידע והאסטרטגיות שפיתחה לאורך השנים בשטח.</p>
+        <div class="about-role">מומחית ייעוץ ופיתוח ארגוני | מרצה | מנחת סדנאות</div>
+        <p class="about-p">סוזן בכר היא אחת המומחיות הבולטות בישראל בתחום הכניסה לשוק הארגוני. עם שנים של ניסיון בהדרכה וייעוץ לארגונים גדולים — היא בנתה את הערכה כך שתעביר לך את כל הידע, הכלים, והאסטרטגיות שהיא פיתחה בשטח.</p>
+        <p class="about-p">בדיוק כפי שסוזן הפכה למאסטרית בתקשורת עם ארגונים, סגירת חוזים, והצגת ערך — כך גם אתה תוכל, עם הכלים שהיא מעניקה לך.</p>
         <div class="creds">
           <span class="cred">MA ייעוץ ארגוני</span>
           <span class="cred">BA ניהול עסקים</span>
           <span class="cred">מומחית HR</span>
           <span class="cred">מרצה אורחת</span>
+          <span class="cred">שנות ניסיון בשטח</span>
         </div>
       </div>
     </div>
@@ -541,81 +729,104 @@ footer a{color:var(--gold);text-decoration:none}
 </section>
 
 <!-- PRICING -->
-<section class="section" id="pricing">
+<section class="sec" id="pricing">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">מחיר</div>
-      <h2 class="sec-title">השקעה אחת שמשנה הכל</h2>
-      <p class="sec-sub">בארגון ממוצע, עסקה אחת שווה פי 20 מהמחיר של הערכה. זו לא הוצאה — זו השקעה.</p>
+    <div class="sh r0">
+      <div class="tag">הצעה מוגבלת</div>
+      <h2 class="h2">השקעה אחת. תוצאות לכל החיים.</h2>
+      <p class="sub">עסקה אחת עם ארגון מחזירה את ההשקעה פי 20 לפחות. כל השאר — רווח נקי.</p>
     </div>
-    <div class="pricing-box reveal">
-      <div class="pricing-head">
+    <div class="pricing-card rs">
+      <div class="pc-head">
+        <div class="pc-badge">⚡ מחיר השקה — לזמן מוגבל</div>
         <h2>ערכת המאסטר MASTER KIT</h2>
-        <p>כל הכלים במקום אחד — גישה מיידית למייל</p>
+        <p>כל הכלים במקום אחד | גישה מיידית ל-7 כלים מוכחים</p>
       </div>
-      <div class="pricing-body">
-        <img src="https://suzanb.co.il/wp-content/uploads/2025/01/mocup2_small.png" alt="ערכת המאסטר" class="p-mockup" loading="lazy"/>
-        <div class="p-price">
-          <span class="old">₪695</span>
+      <div class="pc-body">
+        <img src="https://suzanb.co.il/wp-content/uploads/2025/01/mocup2_small.png" alt="ערכת המאסטר" class="pc-mockup" loading="lazy"/>
+        <div class="pc-price">
+          <span class="old">₪1,479</span>
           <span class="sym">₪</span><span class="big">49</span>
         </div>
-        <div class="p-note">*3 תשלומים נוחים של ₪16.33 בלבד</div>
-        <ul class="p-features">
-          <li>10 השאלות הקריטיות — לחשוף צרכים ותקציבים</li>
-          <li>חוברת 30 התנגדויות — לעולם לא תיתפס לא מוכן</li>
-          <li>הקלטת סשן הדרכה מלאה</li>
-          <li>מצגת הדרכה לצפייה חוזרת</li>
-          <li>דף עבודה BIG 5 — מסר שלא ניתן לסרב לו</li>
-          <li>Magic Table — תכנון שנתי מעשי</li>
-          <li>סרטוני בונוס ליישום מיידי</li>
-          <li>גישה מיידית ישירות למייל — 24/7</li>
+        <div class="pc-note">*3 תשלומים נוחים של ₪16.33 | כרטיס אשראי / PayPal</div>
+        <ul class="pc-feat">
+          <li><b>10 השאלות הקריטיות</b> — חשיפת תקציב וצרכים <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪197</span></li>
+          <li><b>חוברת 30 ההתנגדויות</b> — לעולם לא תיתפס לא מוכן <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪247</span></li>
+          <li><b>הקלטת סשן הדרכה</b> — "נכנסים לעבודה עם ארגונים" <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪397</span></li>
+          <li><b>מצגת הדרכה מלאה</b> — לצפייה חוזרת 24/7 <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪197</span></li>
+          <li><b>דף עבודה BIG 5</b> — מסר שלא ניתן לסרב לו <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪147</span></li>
+          <li><b>Magic Table</b> — תכנון שנתי ותמחור מדויק <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪197</span></li>
+          <li><b>סרטוני בונוס 🎁</b> — טיפים מהירים ליישום מיידי <span style="margin-right:auto;color:var(--brown);font-size:.8rem">שווי ₪97</span></li>
+          <li><b>גישה מיידית</b> ישירות למייל — ללא המתנה</li>
         </ul>
         <form onsubmit="handleForm(event)">
-          <div class="fi"><input type="email" placeholder="כתובת אימייל *" required id="p-email" style="width:100%;border:2px solid #e8e8e8;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:#1E2A38;outline:none;margin-bottom:12px;transition:border-color .25s" onfocus="this.style.borderColor='#DABA88'" onblur="this.style.borderColor='#e8e8e8'"/></div>
-          <div class="fi"><input type="tel" placeholder="מספר טלפון *" required id="p-phone" style="width:100%;border:2px solid #e8e8e8;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:#1E2A38;outline:none;margin-bottom:12px;transition:border-color .25s" onfocus="this.style.borderColor='#DABA88'" onblur="this.style.borderColor='#e8e8e8'"/></div>
-          <button type="submit" class="btn-gold" style="width:100%;font-size:1.1rem;padding:17px">לרכישה ← קבל גישה מיידית עכשיו</button>
+          <input type="email" placeholder="📧 כתובת אימייל" required id="p-email"
+            style="width:100%;border:2px solid #eaeaea;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;margin-bottom:11px;transition:border-color .25s"
+            onfocus="this.style.borderColor='#DABA88'" onblur="this.style.borderColor='#eaeaea'"/>
+          <input type="tel" placeholder="📱 מספר טלפון" required id="p-phone"
+            style="width:100%;border:2px solid #eaeaea;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;margin-bottom:14px;transition:border-color .25s"
+            onfocus="this.style.borderColor='#DABA88'" onblur="this.style.borderColor='#eaeaea'"/>
+          <button type="submit" class="btn-cta" style="font-size:1.12rem;padding:18px">
+            לרכישה ← קבל גישה מיידית עכשיו
+          </button>
         </form>
-        <div class="p-secure"><strong>🔒 רכישה מאובטחת</strong> | גישה מיידית | מספר ערכות מוגבל</div>
+        <div class="pc-secure">
+          <strong>🔒 תשלום מאובטח לחלוטין</strong> | גישה מיידית למייל | <strong>מספר ערכות מוגבל</strong>
+          <br/>ביטול בכל עת | פרטיות מלאה מובטחת
+        </div>
       </div>
+    </div>
+
+    <!-- RISK REVERSAL -->
+    <div class="rr-box r0" style="margin-top:28px;background:rgba(30,42,56,.06);border:1px solid rgba(30,42,56,.12)">
+      <div class="rr-icon">🛡️</div>
+      <p style="color:#444"><strong style="color:var(--navy)">ביטחון מלא:</strong> אם לאחר קריאת הערכה לא תרגיש שהכלים שינו את הגישה שלך — צור קשר וטפל בזה. אנחנו כאן בשבילך.</p>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section cream">
+<section class="sec cream">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sh r0">
       <div class="tag">שאלות נפוצות</div>
-      <h2 class="sec-title">יש לך שאלות?</h2>
+      <h2 class="h2">תשובות לכל מה שמעצור אותך</h2>
     </div>
-    <div class="faq-wrap reveal">
+    <div class="faq-wrap r0">
       <div class="faq-item">
         <button class="faq-btn" onclick="faq(this)">
-          אין לי ניסיון בעבודה עם ארגונים — זה בשבילי?
+          אין לי ניסיון בעבודה עם ארגונים — האם הערכה מתאימה לי?
           <span class="faq-ico">+</span>
         </button>
-        <div class="faq-ans"><div class="faq-ans-in">בדיוק בשביל זה בנינו את הערכה. היא מתחילה מהבסיס ומלווה אותך צעד אחר צעד, ללא ניסיון קודם. כל הכלים שתצטרך נמצאים בערכה עם הסברים מפורטים על איך לפעול נכון מול ארגונים.</div></div>
+        <div class="faq-ans"><div class="faq-ans-in">בדיוק בשביל זה בנינו את הערכה. היא מתחילה מהבסיס ומלווה אותך צעד אחר צעד, ללא ניסיון קודם. כל הכלים שתצטרך נמצאים בערכה עם הסברים מפורטים על איך לפעול נכון מול ארגונים — אפילו אם זו הפנייה הראשונה שלך.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faq(this)">
-          אין לי זמן לראות את כל התכנים עכשיו — מה אני עושה?
+          אין לי זמן לראות את כל התכנים עכשיו
           <span class="faq-ico">+</span>
         </button>
-        <div class="faq-ans"><div class="faq-ans-in">הכל נמצא אצלך במייל וזמין 24/7. תוכל לחזור לתכנים מתי שנוח לך, בקצב שלך. כל כלי עומד בפני עצמו — תוכל להשתמש בו בדיוק כשצריך.</div></div>
+        <div class="faq-ans"><div class="faq-ans-in">הכל נמצא אצלך במייל וזמין 24/7 — לצמיד. כל כלי עומד בפני עצמו ויכול לשמש אותך בדיוק כשצריך: לפני פגישה עם ארגון, בזמן שיחת מכירה, או כשנתקעת בהתנגדות. אין צורך לראות הכל לפני שמתחילים.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faq(this)">
-          איך אדע שזה יעבוד בשבילי?
+          איך אדע שזה יעבוד בשבילי — בתחום שלי?
           <span class="faq-ico">+</span>
         </button>
-        <div class="faq-ans"><div class="faq-ans-in">הערכה פשוטה וברורה, עם טמפלטים לקריאה וביצוע מיידי, יחד עם סרטונים. כבר עשרות בעלי עסקים נכנסו לארגונים בזכות הערכה — זה אפשרי גם עבורך.</div></div>
+        <div class="faq-ans"><div class="faq-ans-in">הכלים בערכה עובדים לכל תחום — יועצים, מדריכים, מנחי סדנאות, מאמנים, ספקי שירות, ועוד. הם מבוססים על עקרונות מכירה ותקשורת אנושית שרלוונטיים לכל שוק ארגוני. כבר עשרות בעלי עסקים בתחומים שונים נכנסו לארגונים בזכות הכלים הללו.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-btn" onclick="faq(this)">
-          האם זה מתאים גם לעסקים קטנים?
+          האם זה מתאים גם לעסקים קטנים וחד-אדמיים?
           <span class="faq-ico">+</span>
         </button>
-        <div class="faq-ans"><div class="faq-ans-in">בהחלט. הערכה מיועדת לכל עסק שמעוניין להיכנס לשוק הארגונים — בין אם קטן או בינוני. ארגונים היום פתוחים יותר מתמיד לעבוד עם עסקים קטנים וזריזים.</div></div>
+        <div class="faq-ans"><div class="faq-ans-in">בהחלט — זה בנוי בדיוק בשביל עסקים קטנים. ארגונים היום מעדיפים לעבוד עם ספקים קטנים, גמישים, ואישיים. הערכה תראה לך איך להפוך את ה"קטנות" שלך ליתרון תחרותי אמיתי.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="faq(this)">
+          מה קורה אחרי הרכישה? איך מקבלים גישה?
+          <span class="faq-ico">+</span>
+        </button>
+        <div class="faq-ans"><div class="faq-ans-in">מיד לאחר הרכישה תקבל לינק גישה ישירות למייל שלך — תוך דקות. כל הכלים זמינים ישירות, ללא התקנות או תוכנות מיוחדות. פשוט פותחים ומתחילים.</div></div>
       </div>
     </div>
   </div>
@@ -623,98 +834,106 @@ footer a{color:var(--gold);text-decoration:none}
 
 <!-- FINAL CTA -->
 <section class="final">
-  <div class="reveal">
-    <h2>מה יקרה אם לא תפעל עכשיו?</h2>
-    <p>אפשר להמשיך לחכות — ולהמשיך לצפות במתחרים שלך נכנסים לשוק הארגונים. או שאתה פועל היום ומתחיל לראות תוצאות בתקופה הקרובה.</p>
-    <a href="#pricing" style="display:inline-block;background:linear-gradient(135deg,#DABA88,#c9a56e);color:#1E2A38;border-radius:10px;padding:18px 46px;font:900 1.1rem/1 'Heebo',sans-serif;text-decoration:none;box-shadow:0 6px 28px rgba(218,186,136,.4);transition:transform .25s,box-shadow .25s;margin-bottom:22px" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
-      אני בוחר להצליח — קבל גישה עכשיו ←
-    </a>
-    <div class="or">— או —</div>
+  <div class="r0">
+    <h2>מה יקרה <em>אם לא תפעל</em> עכשיו?</h2>
+    <p>כל יום שאתה מחכה, המתחרים שלך נכנסים לארגונים שיכולים היה להיות שלך. המחיר הזה לא יחזור. ההזדמנות הזו — כן. אתה בוחר.</p>
+    <a href="#pricing" class="final-cta-big">אני בוחר להצליח ← קבל גישה עכשיו</a>
+    <div class="or-div">— רוצה לדבר קודם? —</div>
     <a href="https://wa.me/972XXXXXXXXX" class="btn-wa" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      שיחה עם סוזן בווטצאפ
+      שיחת ייעוץ עם סוזן בווטצאפ
     </a>
+
+    <div class="rr-box r0" style="margin-top:32px">
+      <div class="rr-icon">🛡️</div>
+      <p><strong>ביטחון מלא:</strong> גישה מיידית | תשלום מאובטח | תמיכה אישית זמינה</p>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>© כל הזכויות שמורות לסוזן בכר 2024–2026</p>
-  <p><a href="#">מדיניות פרטיות</a> | <a href="#">הצהרת נגישות</a></p>
+  <p><a href="#">מדיניות פרטיות</a> · <a href="#">הצהרת נגישות</a> · <a href="https://wa.me/972XXXXXXXXX">צור קשר</a></p>
 </footer>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modal" onclick="closeOut(event)">
   <div class="modal">
     <button class="modal-x" onclick="closeModal()">✕</button>
-    <h3>קבל גישה מיידית לערכה</h3>
-    <p>מחיר השקה — ₪49 בלבד (3 תשלומים נוחים). גישה מיידית למייל.</p>
+    <h3>קבל גישה מיידית ← ₪49</h3>
+    <p>מחיר השקה מוגבל — 3 תשלומים נוחים של ₪16.33. גישה מיידית למייל.</p>
     <form onsubmit="handleForm(event)">
-      <div class="fi"><input type="email" placeholder="כתובת אימייל *" required id="m-email" style="width:100%;border:2px solid #e8e8e8;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:#1E2A38;outline:none;margin-bottom:12px"/></div>
-      <div class="fi"><input type="tel" placeholder="מספר טלפון *" required id="m-phone" style="width:100%;border:2px solid #e8e8e8;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:#1E2A38;outline:none;margin-bottom:12px"/></div>
-      <button type="submit" class="btn-gold">לרכישה ← קבל גישה עכשיו</button>
+      <input type="email" placeholder="📧 כתובת אימייל" required id="m-email"
+        style="width:100%;border:2px solid #eaeaea;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;margin-bottom:11px"/>
+      <input type="tel" placeholder="📱 מספר טלפון" required id="m-phone"
+        style="width:100%;border:2px solid #eaeaea;border-radius:10px;padding:13px 15px;font:400 .97rem/1 'Heebo',sans-serif;direction:rtl;color:var(--navy);outline:none;margin-bottom:14px"/>
+      <button type="submit" class="btn-cta">לרכישה ← קבל גישה עכשיו</button>
     </form>
+    <div style="text-align:center;font-size:.72rem;color:#bbb;margin-top:10px">🔒 תשלום מאובטח | גישה מיידית</div>
   </div>
 </div>
 
 <script>
-// ── SCROLL REVEAL ──
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('on')})
-},{threshold:.12});
-document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+/* ── REVEAL ── */
+const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.1});
+document.querySelectorAll('.r0,.rl,.rr,.rs').forEach(el=>obs.observe(el));
 
-// ── COUNTERS ──
-function animCount(el,target,dur){
-  let n=0,step=target/(dur/16);
-  const t=setInterval(()=>{
-    n+=step; if(n>=target){el.textContent=target;clearInterval(t);return}
-    el.textContent=Math.floor(n);
-  },16);
-}
-const cObs=new IntersectionObserver(entries=>{
-  if(entries[0].isIntersecting){
-    animCount(document.getElementById('c1'),80,1500);
-    animCount(document.getElementById('c2'),7,800);
-    animCount(document.getElementById('c3'),20,1200);
-    cObs.disconnect();
+/* ── COUNTERS ── */
+function ac(el,t,d){let n=0,s=t/(d/16);const i=setInterval(()=>{n+=s;if(n>=t){el.textContent=t;clearInterval(i);return}el.textContent=Math.floor(n)},16)}
+const co=new IntersectionObserver(en=>{
+  if(en[0].isIntersecting){
+    ac(document.getElementById('c1'),80,1500);
+    ac(document.getElementById('c2'),7,800);
+    ac(document.getElementById('c3'),20,1200);
+    ac(document.getElementById('c4'),50,1400);
+    co.disconnect();
   }
-},{threshold:.5});
-const cEl=document.querySelector('.counter');
-if(cEl) cObs.observe(cEl);
+},{threshold:.4});
+const cEl=document.querySelector('[id="c1"]');
+if(cEl)co.observe(cEl.closest('div').closest('div'));
 
-// ── FAQ ──
+/* ── COUNTDOWN ── */
+(function(){
+  const key='mk_deadline';
+  let dl=localStorage.getItem(key);
+  if(!dl){dl=Date.now()+24*60*60*1000;localStorage.setItem(key,dl);}
+  const el=document.getElementById('countdown');
+  if(!el)return;
+  setInterval(()=>{
+    const diff=Math.max(0,dl-Date.now());
+    const h=String(Math.floor(diff/3600000)).padStart(2,'0');
+    const m=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    const s=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    el.textContent=`${h}:${m}:${s}`;
+  },1000);
+})();
+
+/* ── FAQ ── */
 function faq(btn){
   const item=btn.closest('.faq-item'),open=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-  if(!open) item.classList.add('open');
+  if(!open)item.classList.add('open');
 }
 
-// ── MODAL ──
-function openModal(){
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeModal(){
-  document.getElementById('modal').classList.remove('open');
-  document.body.style.overflow='';
-}
-function closeOut(e){if(e.target.id==='modal') closeModal();}
+/* ── MODAL ── */
+function openModal(){document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow=''}
+function closeOut(e){if(e.target.id==='modal')closeModal()}
 
-// ── FORM ──
+/* ── FORM ── */
 function handleForm(e){
   e.preventDefault();
-  // TODO: connect to payment gateway
-  alert('תודה! תקבל גישה מיידית למייל שלך ✉️\nנצור קשר בהקדם.');
+  alert('תודה! 🎉\nתקבל גישה מיידית למייל שלך.\nנשמח לשמוע על ההצלחות שלך בארגונים!');
+  closeModal();
 }
 
-// ── STICKY HIDE NEAR BOTTOM ──
+/* ── STICKY HIDE NEAR FOOTER ── */
 window.addEventListener('scroll',()=>{
-  const bar=document.querySelector('.sticky');
-  if(!bar) return;
-  const nearBottom=window.scrollY+window.innerHeight>document.documentElement.scrollHeight-220;
-  if(nearBottom) bar.style.display='none';
-  else if(window.innerWidth<=768) bar.style.display='flex';
+  const bar=document.querySelector('.sticky-mob');
+  if(!bar)return;
+  const near=window.scrollY+window.innerHeight>document.documentElement.scrollHeight-240;
+  if(window.innerWidth<=768)bar.style.display=near?'none':'flex';
 });
 </script>
 </body>
